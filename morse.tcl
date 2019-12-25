@@ -1,0 +1,37 @@
+array set morse {
+	" " " "
+	a ".-"
+	b "-..."
+	c "-.-."
+	d "-.."
+	e "."
+	f "..-."
+	g "--."
+	h "...."
+	i ".."
+	j ".---" 
+	k "-.-"
+	l ".-.."
+	m "--"
+	n "-."
+	o "---"
+	p ".--."
+	q "--.-"
+	r ".-."
+	s "..."
+	t "-"
+	u "..-"
+	v "...-"
+	w ".--"
+	x "-..-"
+	y "-.--"
+	z "--.."
+}
+
+puts "Zadaj vstup \[a-z\]: "
+set input [split [string tolower [gets stdin]] ""]
+puts "V Morse je to: "
+foreach x $input {
+	puts -nonewline "[lindex [array get morse $x] 1] "
+}
+puts "\n"
